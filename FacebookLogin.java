@@ -6,25 +6,27 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FacebookLogin {
 
-    WebDriver firefoxDriver;
+    WebDriver driver;
 
     FacebookLogin() {
-        firefoxDriver = new FirefoxDriver();
+//        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "./chromedriver");
+        driver = new ChromeDriver();
     }
 
     public String login(String username, String password) throws InterruptedException {
-        firefoxDriver.get("https://www.facebook.com");
-        WebElement emailInput = firefoxDriver.findElement(By.id("email"));
+        driver.get("https://www.facebook.com");
+        WebElement emailInput = driver.findElement(By.id("email"));
         emailInput.sendKeys(username);
-        WebElement passwordInput = firefoxDriver.findElement(By.cssSelector("#pass"));
+        WebElement passwordInput = driver.findElement(By.cssSelector("#pass"));
         passwordInput.sendKeys(password);
 
         Thread.sleep(2000);
-        WebElement loginButton = firefoxDriver.findElement(By.cssSelector("#loginbutton"));
+        WebElement loginButton = driver.findElement(By.cssSelector("#loginbutton"));
         loginButton.click();
         Thread.sleep(3000);
 
-        WebElement userNameErrorMessage = firefoxDriver.findElement(By.cssSelector("div[data-ownerid='email'] a[href='/r.php']"));
+        WebElement userNameErrorMessage = driver.findElement(By.cssSelector("div[data-ownerid='email'] a[href='/r.php']"));
 
         String userNameErrorMessageText = userNameErrorMessage.getText();
 
@@ -33,7 +35,7 @@ public class FacebookLogin {
 
 
     public void quitDriver() {
-        firefoxDriver.quit();
+        driver.quit();
     }
 }
 
