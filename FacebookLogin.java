@@ -9,9 +9,7 @@ public class FacebookLogin {
     WebDriver firefoxDriver;
 
     FacebookLogin() {
-//        firefoxDriver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "/Users/muralikv/projects/chromedriver");
-        firefoxDriver = new ChromeDriver();
+        firefoxDriver = new FirefoxDriver();
     }
 
     public String login(String username, String password) throws InterruptedException {
