@@ -15,13 +15,13 @@ public class FacebookLogin {
     }
 
     public String login(String username, String password) throws InterruptedException {
-        driver.get("https://www.facebook.com");
+        driver.get("https://www.google.com");
         WebElement emailInput = driver.findElement(By.id("email"));
         emailInput.sendKeys(username);
         WebElement passwordInput = driver.findElement(By.cssSelector("#pass"));
         passwordInput.sendKeys(password);
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement loginButton = driver.findElement(By.cssSelector("#loginbutton"));
         loginButton.click();
         Thread.sleep(3000);
