@@ -10,12 +10,12 @@ public class FacebookLogin {
 
     FacebookLogin() {
 //        driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "./chromedriver");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver")
         driver = new ChromeDriver();
     }
 
     public String login(String username, String password) throws InterruptedException {
-        driver.get("https://www.google.com");
+        driver.get("https://www.facebook.com");
         WebElement emailInput = driver.findElement(By.id("email"));
         emailInput.sendKeys(username);
         WebElement passwordInput = driver.findElement(By.cssSelector("#pass"));
