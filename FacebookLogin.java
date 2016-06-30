@@ -13,7 +13,7 @@ public class FacebookLogin {
 
     FacebookLogin() {
 //        driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "/users/nalinim/java/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver");
         driver = new ChromeDriver();
     }
 
