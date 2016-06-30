@@ -6,8 +6,8 @@
 
 public class FailureException extends Exception{
 
-    public FailureException(int failureCount){
-        System.out.println("There are failed tests");
+    public FailureException(){
+        System.out.println("There are failed Tests");
 
     }
     }
