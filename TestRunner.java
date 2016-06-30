@@ -9,18 +9,21 @@ import org.junit.runner.notification.Failure;
 public class TestRunner {
     public static void main(String[] args) throws FailureException {
         Result result = JUnitCore.runClasses(FacebookLoginTest.class);
+        System.out.println("Number of Tests ran "+ result.getRunCount() );
+        System.out.println("Number of Tests passed "+ (result.getRunCount()-result.getFailureCount()) );
+        System.out.println("Number of Tests failed " + result.getFailureCount());
         for (Failure failure : result.getFailures()) {
-            //System.out.println(failure.toString());
+            System.out.println("Error");
             System.out.println(failure);
         }
 
 
-        System.out.println("Number of Tests ran "+ result.getRunCount() );
         if(result.getFailureCount() != 0){
-            throw new FailureException(result.getFailureCount());
+            throw new FailureException();
         }
 
-        System.out.println("Number of Tests Passed "+ result.getRunCount());
+        System.out.println("Test execution done ");
 
     }
 }
+
