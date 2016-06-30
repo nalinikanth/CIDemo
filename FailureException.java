@@ -1,0 +1,15 @@
+/**
+ * Created by nalinim on 6/30/16.
+ */
+
+
+
+public class FailureException extends Exception{
+
+    public FailureException(){
+
+    }
+    }
+
+
+
