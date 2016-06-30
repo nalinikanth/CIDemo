@@ -1,3 +1,6 @@
+/**
+ * Created by nalinim on 6/30/16.
+ */
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,12 +13,12 @@ public class FacebookLogin {
 
     FacebookLogin() {
 //        driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "./chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/users/nalinim/java/chromedriver");
         driver = new ChromeDriver();
     }
 
     public String login(String username, String password) throws InterruptedException {
-        driver.get("httpssss://www.facebook.com");
+        driver.get("https://www.facebook.com");
         WebElement emailInput = driver.findElement(By.id("email"));
         emailInput.sendKeys(username);
         WebElement passwordInput = driver.findElement(By.cssSelector("#pass"));
@@ -38,4 +41,5 @@ public class FacebookLogin {
         driver.quit();
     }
 }
+
 
