@@ -12,6 +12,7 @@ public class TestRunner {
         System.out.println("Number of Tests ran "+ result.getRunCount() );
         System.out.println("Number of Tests passed "+ (result.getRunCount()-result.getFailureCount()) );
         System.out.println("Number of Tests failed " + result.getFailureCount());
+        System.out.println("Number of Tests ignored " + result.getIgnoreCount ());
         for (Failure failure : result.getFailures()) {
             System.out.println("Error");
             System.out.println(failure);
