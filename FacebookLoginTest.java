@@ -22,7 +22,7 @@ public class FacebookLoginTest {
 
   @Test
   @Ignore
-    public void shouldGiveWrongUsernameAndExpectsAWrongUsernameError() throws InterruptedException {
+    public void shouldGiveWrongUsernameAndExpectsAWrongUsernameErrorFail() throws InterruptedException {
         facebookLogin = new FacebookLogin();
 
         String actualMessage = facebookLogin.login("user", "password");
