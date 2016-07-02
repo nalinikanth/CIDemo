@@ -21,7 +21,6 @@ public class FacebookLoginTest {
     }
 
   @Test
-  @Ignore
     public void shouldGiveWrongUsernameAndExpectsAWrongUsernameErrorFail() throws InterruptedException {
         facebookLogin = new FacebookLogin();
 
