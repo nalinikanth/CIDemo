@@ -1,0 +1,5 @@
+-c
+javac -cp :./junit-4.10.jar:.:./selenium-server-standalone-2.53.0.jar:. FacebookLogin.java FacebookLoginTest.java TestRunner.java
+
+ -c
+java -cp :./junit-4.10.jar:.:./selenium-server-standalone-2.53.0.jar:. TestRunner
