@@ -26,8 +26,8 @@ public class FacebookLoginTest {
 
         String actualMessage = facebookLogin.login("user", "password");
 
-        //Assert.assertEquals("Sign up for an account.", actualMessage);
-        Assert.assertEquals("Sign up for an account1234.", actualMessage);
+        Assert.assertEquals("Sign up for an account.", actualMessage);
+        //Assert.assertEquals("Sign up for an account1234.", actualMessage);
     }
     @After
     public void tearDown() {
