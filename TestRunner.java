@@ -24,6 +24,7 @@ public class TestRunner {
         }
 
         System.out.println("Test execution done ");
+        System.out.println("Test execution done ");
 
     }
 }
